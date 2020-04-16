@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Marks</title>
+</head>
+
+<body>
+
+    <hr>
+    <h2>Edit Submission:</h2>
+    <form action="/enter_marks/edit_marks/{{student.usn}}/{{student.subject}}" method="POST">
+
+
+        name: <input type="text" name="name" id="name" value="{{student.name}}" required>
+        <br>
+        usn: <input type="text" name="usn" id="usn" value="{{student.usn}}" required>
+        <br>
+        subject: <input type="text" name="subject" id="subject" value="{{student.subject}}" required>
+        <br>
+        cie1: <input type="number" name="cie1" id="cie1" value="{{student.cie1}}">
+        cie2: <input type="number" name="cie2" id="cie2" value="{{student.cie2}}">
+        cie3: <input type="number" name="cie3" id="cie3" value="{{student.cie3}}">
+        <br>
+        lab1: <input type="number" name="lab1" id="lab1" value="{{student.lab1}}">
+        lab2: <input type="number" name="lab2" id="lab2" value="{{student.lab2}}">
+        aat: <input type="number" name="aat" id="aat" value="{{student.aat}}">
+        <br>
+        quiz1: <input type="number" name="quiz1" id="quiz1" value="{{student.quiz1}}">
+        quiz2: <input type="number" name="quiz2" id="quiz2" value="{{student.quiz2}}">
+        <br>
+        see: <input type="number" name="see" id="see" value="{{student.see}}">
+        <br>
+        <input type="submit" value="Save">
+    </form>
+    <hr>
+
+</body>
+
+</html>
