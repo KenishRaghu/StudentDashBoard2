@@ -3,8 +3,6 @@
     width: 960px;
     background: #fff;
     border-radius: 10px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
     overflow: hidden;
   
     display: -webkit-box;
@@ -28,7 +26,7 @@
 }
 .tea
 {
-    margin-top: 0%;
+    margin-top: ;
 }
 .disp_stu
 {
