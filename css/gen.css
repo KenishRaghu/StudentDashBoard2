@@ -1,4 +1,8 @@
-#lolipop
+button
+{
+    outline-style: none;
+}
+.lolipop
 {
     width: 960px;
     background: #fff;
@@ -12,16 +16,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 177px 130px 33px 95px;
+    padding: 130px 130px 45px 65px;
 }
 #edit-btn
 {
     border-top-left-radius: 0%;
     border-top-right-radius: 0%;
 }
+.title_desig
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 .desig
 {
-    margin: 5% 45% 10%;
+    margin: 0% 45% 10%;
     
 }
 .tea
