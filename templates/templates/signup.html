@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+
+<body>
+
+    <h3>Sign Up</h3>
+    <div>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="notification is-danger">
+            {{ messages[0] }} Go to <a href="login">login page</a>.
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <form action="/signup" method="POST">
+            <input class="input is-large" type="text" name="name" placeholder="Name" required>
+            <br>
+            <input class="input is-large" type="email" name="email" placeholder="Email" required>
+            <br>
+            <input class="input is-large" type="password" name="password" placeholder="Password" required>
+            <br>
+            <button>Sign Up</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

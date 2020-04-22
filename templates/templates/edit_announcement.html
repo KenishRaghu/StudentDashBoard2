@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Marks</title>
+</head>
+
+<body>
+
+    <hr>
+    <h2>Edit Submission:</h2>
+    <form action="/enter_announcement/edit_announcement/{{announcement.time}}" method="POST">
+
+        Title: <input type="text" name="title" id="title" value="{{announcement.title}}">
+        <br>
+        Content:
+        <br>
+        <textarea rows="4" cols="50" name="content" id="content">{{announcement.content}}</textarea>
+        <br>
+        <input type="submit" value="Save">
+    </form>
+    <hr>
+
+</body>
+
+</html>
