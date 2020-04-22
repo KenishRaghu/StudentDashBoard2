@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <h3>Login</h3>
+    <div>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="notification is-danger">
+            {{ messages[0] }}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="/login">
+            <input type="email" name="email" placeholder="Your Email" required>
+            <br>
+            <input type="password" name="password" placeholder="Your Password" required>
+            <br>
+            <label class="checkbox">
+                <input type="checkbox" name="remember"> Remember me
+            </label>
+            <br>
+            <button>Login</button>
+
+            <a href="/signup">Register</a>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
