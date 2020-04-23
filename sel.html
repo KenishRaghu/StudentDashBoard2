@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Student</title>
+        <title>Select your Designation</title>
         <!--===============================================================================================-->
         <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
         <!--===============================================================================================-->
@@ -37,43 +37,45 @@
             href="vendor/select2/select2.min.css"
         />
         <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="css/util.css" />
-        <link rel="stylesheet" type="text/css" href="css/main.css" />
-        <link rel="stylesheet" type="text/css" href="css/student.css"
-        <!--===============================================================================================-->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/gen.css" />
+        <link rel="stylesheet" href="css/util.css" />
     </head>
 
     <body>
         <div class="limiter">
             <div class="container-login100">
-                <div class="wrap-stu">
-                    <div class="top-flex">
-                        <h1>Please select an option to proceed</h1>
-                    </div>
+                <div class="wrap-sel">
                     <div class="myflexbox">
-                        <p>
-                            <a class="txt2" href="#">
-                                <button class="login100-form-btn">
+                        <span class="login100-form-title">
+                            Select your Designation
+                        </span>
+
+                        <div class="container-login100-form-btm">
+                            <a href="sign_in.html">
+                                <button class="login100-form-btn" id="Tea">
+                                    Teacher-
                                     <i
-                                        class="fa fa-bullhorn"
+                                        class="fa fa-user"
                                         aria-hidden="true"
                                     ></i>
-                                    Check Announcements
                                 </button>
                             </a>
 
                             <br />
+                        </div>
 
-                            <a class="txt2" href="check_marks.html">
-                                <button class="login100-form-btn">
+                        <div class="container-login100-form-btm">
+                            <a href="student.html">
+                                <button class="login100-form-btn" id="St">
+                                    Student-
                                     <i
-                                        class="fa fa-trophy"
+                                        class="fa fa-graduation-cap"
                                         aria-hidden="true"
                                     ></i>
-                                    Check Marks
                                 </button>
                             </a>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>

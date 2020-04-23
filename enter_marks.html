@@ -1,57 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enter Marks</title>
-</head>
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css" />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor/css-hamburgers/hamburgers.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor/select2/select2.min.css"
+    />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/gen.css" />
+    <link rel="stylesheet" href="css/util.css" />
+  </head>
 
-<body>
+  <body>
+    <div class="limiter">
+      <div class="container-login100">
+        <div class="extra-entermarks">
+          <div class="lolipop">
+            <hr />
+            <span class="login100-form-title">
+              <h2>Create New Submission</h2>
+            </span>
 
-    <hr>
-    <h2>Create New Submission:</h2>
-    <form action="/enter_marks" method="POST">
-        name: <input type="text" name="name" id="name" required>
-        <br>
-        usn: <input type="text" name="usn" id="usn" required>
-        <br>
-        subject: <input type="text" name="subject" id="subject" required>
-        <br>
-        cie1: <input type="number" name="cie1" id="cie1">
-        cie2: <input type="number" name="cie2" id="cie2">
-        cie3: <input type="number" name="cie3" id="cie3">
-        <br>
-        lab1: <input type="number" name="lab1" id="lab1">
-        lab2: <input type="number" name="lab2" id="lab2">
-        aat: <input type="number" name="aat" id="aat">
-        <br>
-        quiz1: <input type="number" name="quiz1" id="quiz1">
-        quiz2: <input type="number" name="quiz2" id="quiz2">
-        <br>
-        see: <input type="number" name="see" id="see">
-        <br>
-        <input type="submit" value="Submit">
-    </form>
-    <hr>
-
+            <form
+              action="/enter_marks"
+              method="POST"
+              style="padding-left: 5%; width: 100%;"
+            >
+              Name:
+              <input
+                type="text"
+                class="int_disable"
+                name="name"
+                id="name"
+                required
+              />
+              <br />
+              USN:&emsp;
+              <input
+                type="text"
+                class="int_disable"
+                name="usn"
+                id="usn"
+                required
+              />
+              <br />
+              Subject:
+              <input
+                type="text"
+                class="int_disable"
+                name="subject"
+                id="subject"
+                required
+              />
+              <br />
+              CIE
+              <br />1:<input
+                type="number"
+                class="int_disable"
+                name="cie1"
+                id="cie1"
+              />2:
+              <input
+                type="number"
+                class="int_disable"
+                name="cie2"
+                id="cie2"
+              />3:
+              <input type="number" class="int_disable" name="cie3" id="cie3" />
+              <br />
+              Lab<br />1:<input
+                type="number"
+                class="int_disable"
+                name="lab1"
+                id="lab1"
+              />2:
+              <input
+                type="number"
+                class="int_disable"
+                name="lab2"
+                id="lab2"
+              /><br />AAT:
+              <input type="number" class="int_disable" name="aat" id="aat" />
+              <br />
+              Quiz<br />1:<input
+                type="number"
+                class="int_disable"
+                name="quiz1"
+                id="quiz1"
+              />2:
+              <input
+                type="number"
+                class="int_disable"
+                name="quiz2"
+                id="quiz2"
+              />
+              <br />
+              SEE:<input
+                type="number"
+                class="int_disable"
+                name="see"
+                id="see"
+              />
+              <br />
+              <div class="container-login100-form-btn">
+                <button class="login100-form-btn" type="submit" value="Submit">
+                  submit
+                </button>
+              </div>
+            </form>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
     {% for student in posts %}
 
     <h1>{{ student.name }}</h1>
     <h2>{{ student.usn }}-{{ student.subject }}</h2>
     <h3>CIE: {{ student.cie1 }} {{ student.cie2 }} {{ student.cie3 }}</h3>
-    <h3>LAB: {{ student.lab1 }} {{ student.lab2 }} AAT: {{ student.aat }} </h3>
+    <h3>LAB: {{ student.lab1 }} {{ student.lab2 }} AAT: {{ student.aat }}</h3>
     <h3>QUIZ: {{ student.quiz1 }} {{ student.quiz2 }}</h3>
     <h3>SEE: {{ student.see }}</h3>
 
-    <a href="/enter_marks/delete_marks/{{student.usn}}/{{student.subject}}">Delete</a>
-    <a href="/enter_marks/edit_marks/{{student.usn}}/{{student.subject}}">Edit</a>
-    <hr>
+    <a href="/enter_marks/delete_marks/{{student.usn}}/{{student.subject}}"
+      >Delete</a
+    >
+    <a href="/enter_marks/edit_marks/{{student.usn}}/{{student.subject}}"
+      >Edit</a
+    >
+    <hr />
 
     {% endfor%}
-
-
-
-</body>
-
+  </body>
 </html>

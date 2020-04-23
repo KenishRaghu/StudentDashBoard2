@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Check Marks</title>
-    <link rel="stylesheet" href="css/gen.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/util.css">
-</head>
+    <link rel="stylesheet" href="css/gen.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/util.css" />
+  </head>
 
-
-<body>
+  <body>
     <div class="limiter">
-        <div class="container-login100">
-            <div class="lolipop">
-                <hr>
-                <h2>Check Marks:</h2>
-                <form action="/check_marks" method="POST">
-                    usn: <input type="text" name="usn" id="usn" required>
-                    <br>
-                    subject: <input type="text" name="subject" id="subject" required>
-                    <br>
-                    <input type="submit" value="Submit">
-                </form>
-               
-            </div>
-            <hr>
-            {% if student_marks %}
-            <h1>{{ student_marks.name }}</h1>
-            <h2>{{ student_marks.usn }}-{{ student_marks.subject }}</h2>
-            <h3>CIE: {{ student_marks.cie1 }} {{ student_marks.cie2 }} {{ student_marks.cie3 }}</h3>
-            <h3>LAB: {{ student_marks.lab1 }} {{ student_marks.lab2 }} AAT: {{ student_marks.aat }} </h3>
-            <h3>QUIZ: {{ student_marks.quiz1 }} {{ student_marks.quiz2 }}</h3>
-            <h3>SEE: {{ student_marks.see }}</h3>
-            <hr>
-            {% endif %}
+      <div class="container-login100">
+        <div class="wrap-login100">
+          <hr />
+          <h2>Check Marks:</h2>
+          <form action="/check_marks" method="POST">
+            usn: <input type="text" name="usn" id="usn" required />
+            <br />
+            subject: <input type="text" name="subject" id="subject" required />
+            <br />
+            <input type="submit" value="Submit" />
+          </form>
         </div>
+        <hr />
+        {% if student_marks %}
+        <h1>{{ student_marks.name }}</h1>
+        <h2>{{ student_marks.usn }}-{{ student_marks.subject }}</h2>
+        <h3>
+          CIE: {{ student_marks.cie1 }} {{ student_marks.cie2 }} {{
+          student_marks.cie3 }}
+        </h3>
+        <h3>
+          LAB: {{ student_marks.lab1 }} {{ student_marks.lab2 }} AAT: {{
+          student_marks.aat }}
+        </h3>
+        <h3>QUIZ: {{ student_marks.quiz1 }} {{ student_marks.quiz2 }}</h3>
+        <h3>SEE: {{ student_marks.see }}</h3>
+        <hr />
+        {% endif %}
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>

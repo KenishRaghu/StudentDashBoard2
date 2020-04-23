@@ -1,48 +1,21 @@
-button
-{
-    outline-style: none;
+.myflexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* align-items: center; */
 }
-.lolipop
-{
-    width: 960px;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-  
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 130px 130px 45px 65px;
-}
-#edit-btn
-{
-    border-top-left-radius: 0%;
-    border-top-right-radius: 0%;
-}
-.title_desig
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.desig
-{
-    margin: 0% 45% 10%;
-    
-}
-.tea
-{
-    margin-top: ;
-}
-.disp_stu
-{
-    display: none;
-}
-#teach_login
-{
-    display: none;
+.wrap-sel {
+  width: 960px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 10% 5% 10% 5%;
 }
