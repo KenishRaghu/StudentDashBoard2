@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Marks</title>
+</head>
+
+<body>
+
+    <hr>
+    <h2>Create New Submission:</h2>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="notification is-danger">
+        {{ messages[0] }}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <form action="/enter_marks" method="POST">
+        name: <input type="text" name="name" id="name" required>
+        <br>
+        usn: <input type="text" name="usn" id="usn" required>
+        <br>
+        subject: <input type="text" name="subject" id="subject" required>
+        <br>
+        cie1: <input type="number" name="cie1" id="cie1">
+        cie2: <input type="number" name="cie2" id="cie2">
+        cie3: <input type="number" name="cie3" id="cie3">
+        <br>
+        lab1: <input type="number" name="lab1" id="lab1">
+        lab2: <input type="number" name="lab2" id="lab2">
+        aat: <input type="number" name="aat" id="aat">
+        <br>
+        quiz1: <input type="number" name="quiz1" id="quiz1">
+        quiz2: <input type="number" name="quiz2" id="quiz2">
+        <br>
+        see: <input type="number" name="see" id="see">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+
+    {% for student in posts %}
+
+    <h1>{{ student.name }}</h1>
+    <h2>{{ student.usn }}-{{ student.subject }}</h2>
+    <h3>CIE: {{ student.cie1 }} {{ student.cie2 }} {{ student.cie3 }}</h3>
+    <h3>LAB: {{ student.lab1 }} {{ student.lab2 }} AAT: {{ student.aat }} </h3>
+    <h3>QUIZ: {{ student.quiz1 }} {{ student.quiz2 }}</h3>
+    <h3>SEE: {{ student.see }}</h3>
+
+    <a href="/enter_marks/delete_marks/{{student.usn}}/{{student.subject}}">Delete</a>
+    <a href="/enter_marks/edit_marks/{{student.usn}}/{{student.subject}}">Edit</a>
+    <hr>
+
+    {% endfor%}
+
+
+
+</body>
+
+</html>
