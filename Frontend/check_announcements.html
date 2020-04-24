@@ -1,27 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <title>Select your Designation</title>
+        <!--===============================================================================================-->
+        <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+        <!--===============================================================================================-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="vendor/bootstrap/css/bootstrap.min.css"
+        />
+        <!--===============================================================================================-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+        />
+        <!--===============================================================================================-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="vendor/animate/animate.css"
+        />
+        <!--===============================================================================================-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="vendor/css-hamburgers/hamburgers.min.css"
+        />
+        <!--===============================================================================================-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="vendor/select2/select2.min.css"
+        />
+        <!--===============================================================================================-->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/check_ann.css" />
+        <link rel="stylesheet" href="css/util.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <body>
+        <div class="limiter">
+            <div class="container-login100">
+                <div class="wrap-ann">
+                    <div class="myflexbox">
+                        {% if announcements %} {% for announcement in
+                        announcements %}
 
-<body>
-    {% if announcements %}
-    {% for announcement in announcements %}
+                        <h1>Title: {{ announcement.title }}</h1>
+                        <h3>{{ announcement.content }}</h3>
+                        <h4>By: {{ announcement.author }}</h4>
+                        <h5>Time: {{ announcement.time[0:10] }}</h5>
+                        <hr />
+                        {% endfor%} {% else %}
+                        <h1>No announcements</h1>
 
-    <h1>Title: {{ announcement.title }}</h1>
-    <h3>{{ announcement.content }}</h3>
-    <h4>By: {{ announcement.author }}</h4>
-    <h5>Time: {{ announcement.time[0:10] }}</h5>
-    <hr>
-    {% endfor%}
-
-    {% else %}
-    <h1>No announcements</h1>
-
-    {% endif %}
-</body>
-
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
